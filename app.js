@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
 });
 
 io.sockets.on('connection', function (socket) {
-  socket.emit('news', { hello: 'world' });
+  socket.emit('first', { hello: 'world' });
   socket.emit('second', { chinese: 'jail' });
   socket.on('my other event', function (data) {
     console.log(data);
@@ -18,3 +18,4 @@ io.sockets.on('connection', function (socket) {
     console.log(data);
   });
 });
+
