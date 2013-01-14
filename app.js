@@ -12,7 +12,7 @@ io.sockets.on('connection', function (socket) {
   socket.emit('first', { hello: 'world' });
   socket.emit('second', { chinese: 'jail' });
   socket.on('my other event', function (data) {
-    console.log(data);
+    /* console.log(data); */
   });
   socket.on('yet other event', function (data) {
     console.log(data);

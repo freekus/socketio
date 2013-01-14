@@ -4,11 +4,17 @@
 <script type="text/JavaScript">
 var socket = io.connect('http://localhost');
   socket.on('first', function (data) {
-    console.log(data);
+    /* console.log(data); */
+    for (property in data) {
+	alert(data[property]);
+    }
     socket.emit('my other event', { myfirst: 'data' });
 
-  socket.on('second', function (data) {
-    console.log(data);
+  socket.on('second', function (data2) {
+    /* console.log(data); */
+    for (property2 in data2) {
+	alert(data2[property]);
+    }
     socket.emit('my other event', { mysecond: 'data1' });
     socket.emit('yet other event', { mysecond: 'data2' });
 
